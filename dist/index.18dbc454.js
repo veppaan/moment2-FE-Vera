@@ -618,6 +618,9 @@ function printCourses(data) {
     coursesEl.innerHTML = "";
     data.sort((a, b)=>a.coursename > b.coursename ? 1 : -1);
     console.table(data);
+    data.forEach((a)=>{
+        coursesEl.innerHTML += `<td>${a.code}</td><td>${a.coursename}</td><td>${a.progression}</td>`;
+    });
 }
 
 },{}]},["80cCk","1SICI"], "1SICI", "parcelRequire94c2")
