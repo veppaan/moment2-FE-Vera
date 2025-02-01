@@ -14,12 +14,20 @@ async function loadCourses(){
         if(!response.ok){
             throw new Error("Fel vid ladding av data...");
         }
-        const data = await response.json();
+        courses = await response.json();
+        printCourses(courses);
 
-
-        console.table(data);
     }catch(error){
             console.error(error);
             document.querySelector("#error").innerHTML = "<p>Ett fel uppstod - prova igen senare!</p>"
         }
+}
+
+function printCourses(data){
+    const coursesEl = document.getElementById("course");
+    coursesEl.innerHTML= "";
+
+    data.sort((a, b) => a.coursename > b.coursename ? 1 : -1);
+
+    console.table(data);
 }
