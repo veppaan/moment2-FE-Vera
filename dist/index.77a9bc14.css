@@ -11,4 +11,10 @@ tr {
 th, td {
   padding: 8px;
 }
+
+body {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
 /*# sourceMappingURL=index.77a9bc14.css.map */

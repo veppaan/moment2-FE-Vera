@@ -10,3 +10,8 @@ tr{
 th, td{
     padding: 8px;
 }
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
