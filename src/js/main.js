@@ -34,9 +34,9 @@ function printCourses(data){
         coursesEl.innerHTML += `<tr><td>${a.code}</td><td>${a.coursename}</td><td>${a.progression}</td></tr> `
     });
 
-    nameEl.addEventListener("click", sortName(data));
-    codeEl.addEventListener("click", sortCode(data));
-    progressionEl.addEventListener("click", sortProgression(data));
+    nameEl.addEventListener("click", () => sortName(data));
+    codeEl.addEventListener("click", () => sortCode(data));
+    progressionEl.addEventListener("click", () => sortProgression(data));
 }
 
 function sortName(data){
