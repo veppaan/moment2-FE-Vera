@@ -11,6 +11,7 @@ window.onload = () =>{
     loadCourses();
 }
 
+//Laddar kurser
 async function loadCourses(){
     try{
         const response = await fetch("https://webbutveckling.miun.se/files/ramschema_ht24.json");
@@ -26,6 +27,7 @@ async function loadCourses(){
         }
 }
 
+//Skriver ut kurser
 function printCourses(data){
     const coursesEl = document.getElementById("course");
     coursesEl.innerHTML= "";
@@ -33,12 +35,12 @@ function printCourses(data){
     data.forEach(a => {
         coursesEl.innerHTML += `<tr><td>${a.code}</td><td>${a.coursename}</td><td>${a.progression}</td></tr> `
     });
-
+    //Eventlyssnare
     nameEl.addEventListener("click", () => sortName(data));
     codeEl.addEventListener("click", () => sortCode(data));
     progressionEl.addEventListener("click", () => sortProgression(data));
 }
-
+//Sorterar efter namn
 function sortName(data){
     const coursesEl = document.getElementById("course");
     coursesEl.innerHTML= "";
@@ -47,6 +49,7 @@ function sortName(data){
         coursesEl.innerHTML += `<tr><td>${a.code}</td><td>${a.coursename}</td><td>${a.progression}</td></tr> `
     });
 }
+//Sorterar efter kurskod
 function sortCode(data){
     const coursesEl = document.getElementById("course");
     coursesEl.innerHTML= "";
@@ -55,6 +58,7 @@ function sortCode(data){
         coursesEl.innerHTML += `<tr><td>${a.code}</td><td>${a.coursename}</td><td>${a.progression}</td></tr> `
     });
 }
+//Sorterar efter progression
 function sortProgression(data){
     const coursesEl = document.getElementById("course");
     coursesEl.innerHTML= "";
