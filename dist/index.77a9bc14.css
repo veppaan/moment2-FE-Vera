@@ -17,4 +17,9 @@ body {
   align-items: center;
   display: flex;
 }
+
+th:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
 /*# sourceMappingURL=index.77a9bc14.css.map */
