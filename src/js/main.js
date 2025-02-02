@@ -48,7 +48,7 @@ function sortName(data){
     coursesEl.innerHTML= "";
     data.sort((a, b) => a.coursename > b.coursename ? 1 : -1);
     data.forEach(a => {
-        coursesEl.innerHTML += `<tr><td>${a.code}</td><td>${a.coursename}</td><td>${a.progression}</td></tr> `
+        coursesEl.innerHTML += `<tr><td>${a.code}</td><td>${a.coursename}</td><td>${a.progression}</td></tr>`
     });
 }
 //Sorterar efter kurskod
@@ -75,7 +75,7 @@ function filterData(){
 
     //Filtrerar
     const filteredData = courses.filter(course =>
-        course.coursename.includes(searchValue) || course.code.includes(searchValue) || course.progression.includes(searchValue)
+        course.coursename.toLowerCase().includes(searchValue.toLowerCase()) || course.code.toLowerCase().includes(searchValue.toLowerCase()) || course.progression.toLowerCase().includes(searchValue.toLowerCase())
     );
     printCourses(filteredData);
 }
