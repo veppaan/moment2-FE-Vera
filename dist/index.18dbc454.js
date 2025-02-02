@@ -604,6 +604,7 @@ let codeEl = document.getElementById("course-code");
 let progressionEl = document.getElementById("progression");
 window.onload = ()=>{
     loadCourses();
+    document.querySelector("#search").addEventListener("input", filterData);
 };
 //Laddar kurser
 async function loadCourses() {
@@ -655,6 +656,13 @@ function sortProgression(data) {
     data.forEach((a)=>{
         coursesEl.innerHTML += `<tr><td>${a.code}</td><td>${a.coursename}</td><td>${a.progression}</td></tr> `;
     });
+}
+//Sökfunktion
+function filterData() {
+    const searchValue = document.querySelector("#search").value;
+    //Filtrerar
+    const filteredData = courses.filter((course)=>course.coursename.includes(searchValue) || course.code.includes(searchValue) || course.progression.includes(searchValue));
+    printCourses(filteredData);
 }
 
 },{}]},["80cCk","1SICI"], "1SICI", "parcelRequire94c2")
