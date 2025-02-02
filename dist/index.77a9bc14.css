@@ -8,7 +8,7 @@ h1 {
 
 table {
   border-collapse: collapse;
-  width: 100%;
+  width: 700px;
 }
 
 tr {
@@ -25,10 +25,24 @@ th, td {
 }
 
 td {
+  font-size: .9em;
   font-weight: 250;
 }
 
 td:nth-child(3) {
+  text-align: center;
+  width: 50px;
+}
+
+td:nth-child(2) {
+  width: 300px;
+}
+
+td:first-child {
+  width: 70px;
+}
+
+th:nth-child(3) {
   text-align: center;
 }
 
@@ -44,6 +58,7 @@ th:hover {
 }
 
 .container {
+  width: 700px;
   margin: 2em 0;
   padding: 1em 3em;
   box-shadow: 3px 3px 10px #0003;

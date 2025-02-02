@@ -6,7 +6,7 @@ h1{
 }
 table{
     border-collapse: collapse;
-    width: 100%;
+    width: 700px;
 }
 tr{
     border-bottom: 1px solid #ddd;
@@ -20,8 +20,19 @@ th, td{
 }
 td{
     font-weight: 250;
+    font-size: 0.9em;
 }
 td:nth-child(3){
+    text-align: center;
+    width: 50px;
+}
+td:nth-child(2){
+    width: 300px;
+}
+td:nth-child(1){
+    width: 70px;
+}
+th:nth-child(3){
     text-align: center;
 }
 body{
@@ -37,6 +48,7 @@ th:hover{
     padding: 1em 3em;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
     margin: 2em 0;
+    width: 700px;
 }
 input{
     width: 100%;

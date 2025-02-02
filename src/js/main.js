@@ -57,16 +57,16 @@ function sortCode(data){
     coursesEl.innerHTML= "";
     data.sort((a, b) => a.code > b.code ? 1 : -1);
     data.forEach(a => {
-        coursesEl.innerHTML += `<tr><td>${a.code}</td><td>${a.coursename}</td><td>${a.progression}</td></tr> `
+        coursesEl.innerHTML += `<tr><td>${a.code}</td><td>${a.coursename}</td><td>${a.progression}</td></tr>`
     });
 }
 //Sorterar efter progression
 function sortProgression(data){
     const coursesEl = document.getElementById("course");
     coursesEl.innerHTML= "";
-    data.sort((a, b) => a.progression > b.progression ? 1 : -1);
+    data.sort((a, b) => a.progression >= b.progression ? 1 : -1);
     data.forEach(a => {
-        coursesEl.innerHTML += `<tr><td>${a.code}</td><td>${a.coursename}</td><td>${a.progression}</td></tr> `
+        coursesEl.innerHTML += `<tr><td>${a.code}</td><td>${a.coursename}</td><td>${a.progression}</td></tr>`
     });
 }
 //Sökfunktion
